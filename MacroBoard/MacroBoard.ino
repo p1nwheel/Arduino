@@ -2,7 +2,7 @@
  * A multi-mode Macro keyboard with Arduino Pro Micro using      
  * row column matrix.
  * This is a blank sketch to understand key layout and assignments. 
- * (c) 2020 Ryan Bates testing!!!
+ * (c) 2020 Ryan Bates 
 
  *******************************************************************/
 // ----------------------------
