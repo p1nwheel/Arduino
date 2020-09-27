@@ -99,39 +99,39 @@ checkModeButton();
       case '1':
         Keyboard.press(KEY_BACKSPACE); //Abort Button & Chute stages with delay
         delay(700);
-        Keyboard.print(" ");
+        Keyboard.press(' ');
         delay(700);
-        Keyboard.print(" ");
+        Keyboard.press(' ');
         delay(700);
-        Keyboard.print(" "); break;
+        Keyboard.press(' '); break;
       case '2': 
-        Keyboard.print("r"); break; //RCS Toggle
+        Keyboard.press('r'); break; //RCS Toggle
       case '3':
-        Keyboard.print("a"); break; //Yaw Left
+        Keyboard.press('a'); break; //Yaw Left
       case '4':
-        Keyboard.print("s"); break; //Pitch Down
+        Keyboard.press('s'); break; //Pitch Down
       case '5':
-        Keyboard.print("d"); break; //Yaw Right
+        Keyboard.press('d'); break; //Yaw Right
       case '6':
-        Keyboard.print("t"); break; //SAS Toggle
+        Keyboard.press('t'); break; //SAS Toggle
       case '7':
-        Keyboard.print("q"); break; //Roll CCW
+        Keyboard.press('q'); break; //Roll CCW
       case '8':
-        Keyboard.print("w"); break; //Pitch Up
+        Keyboard.press('w'); break; //Pitch Up
       case '9':
-        Keyboard.print("e"); break; //Roll CW
+        Keyboard.press('e'); break; //Roll CW
       case '0':
-        Keyboard.print("x"); break; //Cut Throttle
+        Keyboard.press('x'); break; //Cut Throttle
       case 'A': 
-        Keyboard.print("z"); break; //Full Throttle
+        Keyboard.press('z'); break; //Full Throttle
       case 'B':
-        Keyboard.print(" "); break; //Stage
+        Keyboard.press(' '); break; //Stage
       case 'C':
-        Keyboard.print("/"); break; //Cut time drift
+        Keyboard.press('/'); break; //Cut time drift
       case 'D':
-        Keyboard.print("v"); break; //Toggle Camera mode
+        Keyboard.press('v'); break; //Toggle Camera mode
       case 'E':
-        Keyboard.print("m"); break; //Toggle map view
+        Keyboard.press('m'); break; //Toggle map view
       case 'F': 
         Keyboard.println("Alpha key16"); break;
     }
@@ -145,36 +145,36 @@ checkModeButton();
     Serial.println(key);
     switch (key) {
       case '1': 
-        Keyboard.press(KEY_LEFT_GUI); break; //Testing Windows (KSP MOD Key)
+        Keyboard.press(' '); break; // Stage
       case '2': 
-        Keyboard.println("Beta key2"); break;
+        Keyboard.press('r'); break; // RCS Toggle
       case '3':
-        Keyboard.println("Beta key3"); break;
+        Keyboard.press('j'); break; // RCS Left
       case '4':
-        Keyboard.println("Beta key4"); break;
+        Keyboard.press('n'); break; // RCS Back
       case '5':
-        Keyboard.println("Beta key5"); break;
+        Keyboard.press('l'); break; // RCS Right
       case '6':
-        Keyboard.println("Beta key6"); break;
+        Keyboard.press('t'); break; // SAS Toggle
       case '7':
-        Keyboard.println("Beta key7"); break;
+        Keyboard.press('i'); break; // RCS Down
       case '8':
-        Keyboard.println("Beta key8"); break;
+        Keyboard.press('h'); break; // RCS Forward
       case '9':
-        Keyboard.println("Beta key9"); break;
+        Keyboard.press('k'); break; // RCS Up
       case '0':
-        Keyboard.println("Beta key10"); break;
+        Keyboard.press('x'); break; // Cut Throttle
       case 'A': 
-        Keyboard.println("Beta key11"); break;
+        Keyboard.press('z'); break; // Full Throttle
       case 'B':
-        Keyboard.press(KEY_LEFT_GUI);
-        Keyboard.press("l") break;
+        Keyboard.press(KEY_RIGHT_SHIFT);
+        Keyboard.press('l'); break; // Lock Staging
       case 'C':
-        Keyboard.println("Beta key13"); break;
+        Keyboard.press('/'); break; // Quit Time Drift
       case 'D':
-        Keyboard.println("Beta key14"); break;
+        Keyboard.press('v'); break; // Toggle Camera View
       case 'E':
-        Keyboard.println("Beta key15"); break;
+        Keyboard.press('m'); break;
       case 'F': 
         Keyboard.println("Beta key16"); break;
     }
@@ -277,7 +277,7 @@ void checkModeButton(){
       // if the current state is LOW then the button cycled:
       modePushCounter++;
       Serial.println("pressed");
-      Serial.print("number of button pushes: ");
+      Serial.press("number of button pushes: ");
       Serial.println(modePushCounter);
     } 
     delay(50); // Delay a little bit to avoid bouncing
