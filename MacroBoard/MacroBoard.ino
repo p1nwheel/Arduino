@@ -3,7 +3,7 @@
  * row column matrix.
  * This is a blank sketch to understand key layout and assignments. 
  * (c) 2020 Ryan Bates 
- * Macros for KSP by P1nwheel
+ * Modified for KSP by P1nwheel
  *******************************************************************/
 // ----------------------------
 // Standard Libraries
@@ -90,13 +90,13 @@ char key = keypad.getKey();
 checkModeButton();
 
   switch (modePushCounter) { // switch between keyboard configurations:
-    case 0:    //  Application Alpha or MODE 0
+    case 0:    // KSP Launch & Injection Configuration / Pitch - Yaw - Roll
 
       digitalWrite(Mode1,LOW); digitalWrite(Mode2,LOW); //indicate what mode is loaded
        if (key) {
     Serial.println(key);
     switch (key) {
-      case '1': 
+      case '1':
         Keyboard.press(KEY_BACKSPACE); //Abort Button & Chute stages with delay
         delay(700);
         Keyboard.print(" ");
@@ -139,13 +139,13 @@ checkModeButton();
   }
       break;
       
-    case 1:    //  Application Beta or MODE 1
+    case 1:    // KSP Orbital Maneuvering Configuration & RCS Translation 
       digitalWrite(Mode1,HIGH); digitalWrite(Mode2,LOW);
       if (key) {
     Serial.println(key);
     switch (key) {
       case '1': 
-        Keyboard.println("Beta key1"); break;
+        Keyboard.press(KEY_LEFT_GUI); break; //Testing Windows (KSP MOD Key)
       case '2': 
         Keyboard.println("Beta key2"); break;
       case '3':
@@ -167,7 +167,8 @@ checkModeButton();
       case 'A': 
         Keyboard.println("Beta key11"); break;
       case 'B':
-        Keyboard.println("Beta key12"); break;
+        Keyboard.press(KEY_LEFT_GUI);
+        Keyboard.press("l") break;
       case 'C':
         Keyboard.println("Beta key13"); break;
       case 'D':
