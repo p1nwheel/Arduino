@@ -3,7 +3,7 @@
  * row column matrix.
  * This is a blank sketch to understand key layout and assignments. 
  * (c) 2020 Ryan Bates 
-
+ * Macros for KSP by P1nwheel
  *******************************************************************/
 // ----------------------------
 // Standard Libraries
@@ -97,7 +97,7 @@ checkModeButton();
     Serial.println(key);
     switch (key) {
       case '1': 
-        Keyboard.press(KEY_BACKSPACE); //Abort Button
+        Keyboard.press(KEY_BACKSPACE); //Abort Button & Stages with delay for chutes
         delay(700);
         Keyboard.print(" ");
         delay(700);
