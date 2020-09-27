@@ -97,7 +97,7 @@ checkModeButton();
     Serial.println(key);
     switch (key) {
       case '1': 
-        Keyboard.press(KEY_BACKSPACE); //Abort Button & Stages with delay for chutes
+        Keyboard.press(KEY_BACKSPACE); //Abort Button & Chute stages with delay
         delay(700);
         Keyboard.print(" ");
         delay(700);
