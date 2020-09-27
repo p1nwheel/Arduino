@@ -277,7 +277,7 @@ void checkModeButton(){
       // if the current state is LOW then the button cycled:
       modePushCounter++;
       Serial.println("pressed");
-      Serial.press("number of button pushes: ");
+      Serial.print("number of button pushes: ");
       Serial.println(modePushCounter);
     } 
     delay(50); // Delay a little bit to avoid bouncing
