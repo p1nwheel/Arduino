@@ -294,14 +294,14 @@ void encoderA(){
     positionEncoderA = newPos;
     //Serial.println(positionEncoderA);
     Keyboard.press(KEY_LEFT_CTRL);
-    delay(10);
+    delay(25);
     Keyboard.release(KEY_LEFT_CTRL);                      }
 
   if (newPos != positionEncoderA && newPos < positionEncoderA) {
     positionEncoderA = newPos;
     //Serial.println(positionEncoderA);
     Keyboard.press(KEY_LEFT_SHIFT);
-    delay(10);
+    delay(25);
     Keyboard.release(KEY_LEFT_SHIFT);                      }
 }
 
@@ -310,12 +310,12 @@ void encoderB(){
   if (newPos != positionEncoderB && newPos > positionEncoderB) {
     positionEncoderB = newPos;
     //Serial.println(positionEncoderB);
-    Keyboard.press(',');
+    Keyboard.press(','); // Rotate Left - Reduce Time Acceleration
     Keyboard.release(',');                      }
 
   if (newPos != positionEncoderB && newPos < positionEncoderB) {
     positionEncoderB = newPos;
     //Serial.println(positionEncoderB);
-    Keyboard.press('.');
+    Keyboard.press('.'); // Rotate Right - Increase Time Acceleration
     Keyboard.release('.');                      }
 }
